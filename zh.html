@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Artifact Reader — 手机上打开、渲染、导出 AI 生成的 HTML / Markdown(完全离线)</title>
+<meta name="description" content="AI Artifact Reader 是一款 iOS App:把 ChatGPT、Claude、豆包、Kimi、DeepSeek 生成的 HTML / Markdown 在 iPhone、iPad 上渲染成精美页面,完全离线,一键导出长图与 PDF。">
+<link rel="canonical" href="https://ericzzzzhang.github.io/ai-artifact-reader/zh.html">
+<link rel="alternate" hreflang="en" href="https://ericzzzzhang.github.io/ai-artifact-reader/">
+<link rel="alternate" hreflang="zh" href="https://ericzzzzhang.github.io/ai-artifact-reader/zh.html">
+<link rel="alternate" hreflang="x-default" href="https://ericzzzzhang.github.io/ai-artifact-reader/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Artifact Reader">
+<meta property="og:title" content="AI Artifact Reader — 手机看 AI 生成的网页与 Markdown,完全离线">
+<meta property="og:description" content="ChatGPT、Claude、豆包、Kimi 给你的 HTML / Markdown,在 iPhone 上一键渲染成精美页面,导出长图分享。">
+<meta property="og:url" content="https://ericzzzzhang.github.io/ai-artifact-reader/zh.html">
+<meta property="og:image" content="https://ericzzzzhang.github.io/ai-artifact-reader/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{--g1:#4F46E5;--g2:#7C3AED;--ink:#1c1c28;--muted:#6b7280}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff}
+  .wrap{max-width:760px;margin:0 auto;padding:24px 20px 64px}
+  nav.top{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;margin-bottom:28px;color:var(--muted)}
+  nav.top a{color:#5b34c8;text-decoration:none}nav.top a:hover{text-decoration:underline}
+  .badge{width:72px;height:72px;border-radius:20px;background:linear-gradient(135deg,var(--g1),var(--g2));display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(91,52,200,.28);overflow:hidden}
+  .badge img{width:100%;height:100%;display:block}
+  h1{font-size:28px;margin:18px 0 6px;letter-spacing:-.5px}
+  .tag{color:var(--muted);font-size:17px;margin:0 0 22px}
+  h2{font-size:20px;margin:32px 0 10px}
+  ul{padding-left:20px}li{margin:6px 0}
+  .lead{background:#f6f5ff;border:1px solid #e7e3ff;border-radius:14px;padding:16px 18px}
+  a{color:#5b34c8;text-decoration:none}a:hover{text-decoration:underline}
+  .cta{background:#faf9ff;border:1px solid #e7e3ff;border-radius:14px;padding:18px;margin:26px 0;text-align:center}
+  video{width:100%;max-width:380px;border-radius:18px;display:block;margin:18px auto;box-shadow:0 14px 40px rgba(40,20,120,.18)}
+  .shots{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:18px 0}
+  .shots img{width:31%;min-width:160px;border-radius:14px;border:1px solid #eee}
+  .q{font-weight:600;margin-top:14px}
+  footer{margin-top:48px;color:var(--muted);font-size:14px;border-top:1px solid #eee;padding-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <a href="./">English</a>
+    <a href="zh.html">中文</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacy.html">隐私政策</a>
+    <a href="support.html">支持</a>
+  </nav>
+
+  <div class="badge"><img src="assets/icon.png" alt="AI Artifact Reader 应用图标" width="72" height="72"></div>
+  <h1>AI Artifact Reader</h1>
+  <p class="tag">把 AI 给你的 HTML / Markdown,在 iPhone、iPad 上渲染成精美页面 —— 完全离线。</p>
+
+  <p class="lead"><strong>AI Artifact Reader 是一款 iOS App,用来打开、渲染、导出 ChatGPT、Claude、Gemini、豆包(Doubao)、Kimi、DeepSeek、通义千问等 AI 工具生成的 HTML 和 Markdown</strong> —— 知识卡片、报告、网页 demo、动态图表、代码,粘贴或打开文件立刻渲染,默认断网,数据不出设备。支持导出整页高清长图和 PDF,直接分享到微信、小红书。</p>
+
+  <div class="cta" id="appstore-cta">
+    <span style="font-weight:600">📲 即将上架 App Store(审核中)</span><br>
+    届时在 App Store 搜索 <strong>「AI Artifact Reader」</strong> 即可下载。
+  </div>
+
+  <h2>看看效果</h2>
+  <video src="assets/demo.mp4" poster="assets/shot-render.jpg" controls muted playsinline preload="metadata"></video>
+  <div class="shots">
+    <img src="assets/shot-render.jpg" alt="AI Artifact Reader 在 iPhone 上渲染 AI 生成的动态看板" loading="lazy">
+    <img src="assets/shot-home.jpg" alt="AI Artifact Reader 主页文件列表与文件夹" loading="lazy">
+    <img src="assets/shot-pro.jpg" alt="AI Artifact Reader Pro 导出功能" loading="lazy">
+  </div>
+
+  <h2>功能</h2>
+  <ul>
+    <li>渲染 AI 的 HTML 和 Markdown —— GitHub 风格 Markdown、代码高亮、Mermaid 流程图、KaTeX 公式</li>
+    <li>粘贴即看 —— 从 ChatGPT / Claude / 豆包复制,一键打开,不用存文件</li>
+    <li>动态网页直接播 —— 动画、图表、交互页面在手机里原样运行</li>
+    <li>完全离线、隐私安全 —— 默认断网,无账号、无追踪,内容不上传</li>
+    <li>文件夹整理、重命名、文档内搜索;支持多文件包与 .zip</li>
+    <li>从任意 App 分享导入(文件、Safari、微信)</li>
+    <li>Pro:整页导出高清长图 / PDF;本地多文件服务器</li>
+  </ul>
+
+  <h2>常见问题</h2>
+  <p class="q">ChatGPT / 豆包给我的 HTML 代码,手机上怎么看成网页?</p>
+  <p>复制代码 → 打开 AI Artifact Reader → 「粘贴 HTML / Markdown」,立刻渲染成真实页面,完全离线。</p>
+  <p class="q">Claude 的 Artifact 怎么保存到手机上看?</p>
+  <p>把 Artifact 代码复制或下载成文件,在 AI Artifact Reader 里打开 —— 动态效果也能原样播放。</p>
+  <p class="q">Markdown 笔记怎么变成长图分享?</p>
+  <p>打开文档 → 导出 → 高清长图(或 PDF),直接发微信群、小红书。导出是 Pro 功能。</p>
+  <p class="q">收费吗?</p>
+  <p>阅读、粘贴、整理免费。Pro(导出长图/PDF、多文件)¥20 终身买断,或 ¥8 半年(含 7 天免费试用)。</p>
+
+  <h2>适合谁</h2>
+  <ul>
+    <li>常用 ChatGPT、Claude、豆包、Kimi,经常收到一坨 HTML / Markdown 的人</li>
+    <li>用 AI 做知识卡片、周报、学习笔记,想导出成图分享的人</li>
+    <li>在意隐私 —— 不想为了"看个文件"把内容传到别人服务器的人</li>
+  </ul>
+
+  <footer>
+    联系: <a href="mailto:l4a.ai.dev@gmail.com">l4a.ai.dev@gmail.com</a> · <a href="./">English</a> · <a href="privacy.html">隐私政策</a> · <a href="support.html">支持</a><br>
+    © 2026 L4A Dev. AI Artifact Reader.
+  </footer>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"AI Artifact Reader",
+  "operatingSystem":"iOS",
+  "applicationCategory":"ProductivityApplication",
+  "inLanguage":"zh",
+  "description":"iOS App:把 ChatGPT、Claude、豆包、Kimi、DeepSeek 生成的 HTML / Markdown 在 iPhone、iPad 上渲染成精美页面,完全离线,导出长图与 PDF。",
+  "url":"https://ericzzzzhang.github.io/ai-artifact-reader/zh.html",
+  "image":"https://ericzzzzhang.github.io/ai-artifact-reader/assets/og-image.png",
+  "offers":[{"@type":"Offer","name":"终身买断","price":"20","priceCurrency":"CNY"},{"@type":"Offer","name":"半年订阅(7天免费试用)","price":"8","priceCurrency":"CNY"}]
+}
+</script>
+</body>
+</html>
